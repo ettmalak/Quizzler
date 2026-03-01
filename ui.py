@@ -30,6 +30,7 @@ class QuizInterface():
         q_text = self.quiz.next_question()
         self.canvas.itemconfig(self.question_text, text=q_text)
         self.canvas.config(bg="white")
+        self.label.config(text=f"Score: {self.quiz.score}")
     
     def check_true(self):
         is_right = self.quiz.check_answer("True")
